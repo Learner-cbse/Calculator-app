@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/parent_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:animateLayoutChanges="true">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Sign In"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <!-- Welcome Text -->
+        <TextView
+            android:id="@+id/tvDes1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:layout_marginTop="4dp"
+            android:text="Welcome!"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <!-- Instructions -->
+        <TextView
+            android:id="@+id/tvDes2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDes1"
+            android:layout_marginTop="4dp"
+            android:text="Please enter your email and password"
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+
+        <!-- Email -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDes2"
+            android:layout_marginTop="16dp"
+            android:hint="Email"
+            app:boxBackgroundMode="filled"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:endIconMode="clear_text"
+            app:hintTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:padding="16dp"
+                android:maxLines="1"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputEmail"
+            android:layout_marginTop="12dp"
+            android:hint="Password"
+            app:boxBackgroundMode="filled"
+            app:endIconMode="password_toggle"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:hintTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:padding="16dp"
+                android:maxLines="1"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/loginProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+            android:indeterminateTint="@color/black" />
+
+        <!-- Sign In Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tvSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bottom"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/curved_blue_button"
+            android:text="Sign In"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <!-- Bottom Create Account -->
+        <LinearLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have any users?" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textCreateUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="16dp"
+                android:layout_marginLeft="8dp"
+                android:onClick="createUser"
+                android:text="Create Now"
+                android:textAllCaps="true"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

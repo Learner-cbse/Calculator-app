@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Calculatar" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!--  Primary brand color.  -->
+        <item name="colorPrimary">@color/app_background_dark</item>
+        <item name="colorPrimaryVariant">@color/app_background_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!--  Secondary brand color.  -->
+        <item name="colorSecondary">@color/app_background</item>
+        <item name="colorSecondaryVariant">@color/app_background</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Background / Surface / Text colors -->
+        <item name="colorOnBackground">@color/white</item>
+        <item name="colorOnSurface">@color/grey1</item>
+
+        <!-- Legacy text colors -->
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/grey1</item>
+
+        <!--  Status bar color.  -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!--  Customize your theme here.  -->
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+</resources>
