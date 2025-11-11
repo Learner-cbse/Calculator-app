@@ -135,7 +135,6 @@ public class CallButtonFragment extends Fragment {
                     .setUserInfo(userInfo)
                     .setAudioMuted(false)
                     .setVideoMuted(type.equals(StringConstants.TYPE_VOICE))
-                    .setWelcomePageEnabled(false)
                     .build();
 
             JitsiMeetActivity.launch(requireContext(), options);
@@ -145,4 +144,5 @@ public class CallButtonFragment extends Fragment {
             Toast.makeText(getContext(), "Invalid Jitsi server URL", Toast.LENGTH_SHORT).show();
         }
     }
+
 }
